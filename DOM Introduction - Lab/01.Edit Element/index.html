@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+      [name='email']{
+            color:aqua;
+            border: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">DOM Demo</h1>
+    <button onclick="changeColor()">Click Me!</button>
+    <button>Count</button>
+    <ul>
+        <li class="row"><span class="first">DOM</span> Properties</li>
+        <li class="row first">DOM Methods</li>
+        <li class="second row">DOM EventId</li>
+        
+    </ul>
+    <input type="text" name="color" placeholder="Color">
+    <input type="text" name="name">
+    <input type="checkbox" name="consent"> I agree to the Terms and Conditions
+    <script>
+        function edit(element, match, replacer) {
+            let content = element.textContent;
+           element.textContent = content.split(match).join(replacer);
+        }
+        function changeColor() {
+            const input = document.querySelector('[name ="color"]');
+            const color = input.value;
+            console.log(input);
+            const h1 = document.getElementById('title');
+            h1.style.color = 'blue';
+        }
+    </script>
+</body>
+
+</html>
